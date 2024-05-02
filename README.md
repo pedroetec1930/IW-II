@@ -1,4 +1,4 @@
 
-# https://pedroetec1930.github.io/InterfaceWebII/Calculadora
+# https://pedroetec1930.github.io/InterfaceWebII/mario
 
-#https://pedroetec1930.github.io/InterfaceWebII/Lampada
+#https://pedroetec1930.github.io/InterfaceWebII/validacao_jquery
