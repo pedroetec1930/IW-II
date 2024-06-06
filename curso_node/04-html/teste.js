@@ -4,7 +4,7 @@ const sequelize = new Sequelize('test','root','',{
     host: "localhost",
     dialect: 'mysql'
 })
-
+// AUTENTICAÇÃO PARA CONEXÃO DO SERVIDOR
 // sequelize.authenticate().then(function(){
 //     console.log("CONECTADO COM SUCESSO!")
 // }).catch(function(erro){
@@ -50,3 +50,4 @@ Usuario.create({
 
 // Postagem.sync()
 // Usuario.sync()
+
