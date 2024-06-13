@@ -29,7 +29,7 @@ app.get('/cadastro',function(req,res){
 })
 
 app.post('/add',function(req,res){
-    res.send("Texto: " + req.body.titulo + "Conteúdo: " + req.body.conteudo)
+    res.send("Título: " + req.body.titulo + "Conteúdo: " + req.body.conteudo)
 })
 
 app.listen(8081,function(){
