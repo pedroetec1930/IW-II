@@ -14,6 +14,11 @@ function App() {
       <Container>
         <h2>Geografia</h2>
         <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </Container>
       <Footer/>
     </>
