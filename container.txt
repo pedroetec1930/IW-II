@@ -1,0 +1,70 @@
+O QUE É IMAGEM DO DOCKER
+
+Uma imagem do Docker, ou imagem de contêiner, é um arquivo executável independente usado para criar um contêiner. Essa imagem de contêiner contém todas as bibliotecas, dependências e arquivos de que o contêiner precisa para ser executado. Uma imagem do Docker é compartilhável e portátil, então você pode implantar a mesma imagem em vários locais ao mesmo tempo, da mesma forma que um arquivo binário de software. 
+
+Você pode armazenar imagens em registros para acompanhar arquiteturas de software complexas, projetos, segmentos de negócios e acesso a grupos de usuários. Por exemplo, o registro público do Docker Hub contém imagens como sistemas operacionais, estruturas de linguagem de programação, bancos de dados e editores de código. 
+
+A imagem é um arquivo e o contêiner é um processo. Da perspectiva do kernel Linux, um contêiner é um processo com restrições. No entanto, ao invés de executar um único arquivo binário, um contêiner executa uma imagem. Uma imagem é um pacote de sistema de arquivos que contém todas as dependências necessárias para executar um processo: arquivos de biblioteca, arquivos no sistema de arquivos, pacotes instalados, recursos disponíveis, processos em execução e módulos do kernel.
+
+Como os arquivos executáveis são a base para os processos em execução, as imagens são a base para contêineres em execução. Os contêineres em execução usam uma visão imutável da imagem, permitindo vários recipientes para reutilizar a mesma imagem simultaneamente. Como as imagens são arquivos, elas podem ser gerenciadas por sistemas de controle de versão, melhorando a automação do contêiner e o provisionamento.
+
+As imagens Docker são construídas a partir de arquivos Dockerfile. Esses arquivos definem como a imagem deve ser, incluindo o sistema operacional e os comandos a serem executados.
+
+
+---------------------------------------------------------------------------------------------
+
+POR QUE OTIMIZAR IMAGENS?
+
+Grandes imagens Docker podem aumentar o tempo necessário para construir e compartilhar imagens entre clusters e provedores de nuvem. Portanto, é útil otimizar imagens Docker e Dockerfiles para ajudar as equipes a compartilhar imagens Docker menores e mais eficientes e resolver problemas.
+
+Em um ambiente de produção, o Docker facilita a criação, o deployment e a execução de aplicações dentro de containers. Os containers permitem que os desenvolvedores reúnam aplicações e todas as suas principais necessidades e dependências em um único pacote que você pode transformar em uma imagem Docker e replicar. As imagens Docker são construídas a partir de Dockerfiles. O Dockerfile é um arquivo onde você define como será a imagem, qual sistema operacional básico ela terá e quais comandos serão executados dentro dela.
+
+Imagens Docker muito grandes podem aumentar o tempo necessário para criar e enviar imagens entre clusters e provedores de nuvem. Se, por exemplo, você tem uma imagem do tamanho de um gigabyte para enviar toda vez que um de seus desenvolvedores aciona uma compilação, a taxa de transferência que você cria em sua rede aumentará durante o processo de CI/CD, tornando sua aplicação lenta e, consequentemente, custando seus recursos. Por causa disso, as imagens Docker adequadas para produção devem ter apenas as necessidades básicas instaladas.
+
+Existem várias maneiras de diminuir o tamanho das imagens Docker para otimizá-las para a produção. Em primeiro lugar, essas imagens geralmente não precisam de ferramentas de compilação para executar suas aplicações e, portanto, não há necessidade de adicioná-las. Através do uso de um processo de construção multi-stage, você pode usar imagens intermediárias para compilar e construir o código, instalar dependências e empacotar tudo no menor tamanho possível, depois copiar a versão final da sua aplicação para uma imagem vazia sem ferramentas de compilação. Além disso, você pode usar uma imagem com uma base pequena, como o Alpine Linux. O Alpine é uma distribuição Linux adequada para produção, pois possui apenas as necessidades básicas que sua aplicação precisa para executar.
+
+As imagens Docker são fundamentais para implantações de aplicações containerizadas, pois encapsulam tudo o que uma serviço ou aplicativo precisa para funcionar. No entanto, à medida que essas imagens crescem, elas podem se tornar muito grandes, levando a problemas de armazenamento, desempenho e rede. A compressão de imagens Docker é essencial para implantações eficientes, tempos de carregamento reduzidos e transferências mais rápidas através de redes.
+
+Por que Comprimir Imagens Docker?
+A compressão de imagens Docker oferece vários benefícios, incluindo:
+
+
+Armazenamento eficiente e transferências mais rápidas
+Melhoria do desempenho da rede
+Velocidade e desempenho melhorados
+
+---------------------------------------------------------------------------------------------
+
+QUAIS OS PRINCIPAIS FATORES QUE INFLUENCIAM O TAMANHO DE UMA IMAGEM?
+
+Imagens podem ter muitas ferramentas e bibliotecas que podem não ser necessárias para a sua aplicação. Se a sua aplicação não precisa dessas funcionalidades extras, esse tamanho é desnecessariamente grande.
+
+Uma alternativa seria usar uma imagem mais leve, como o Alpine Linux, que tem um tamanho de cerca de 5,58 MB.
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+UTILIZAÇÃO DE SQL EM DOCKER
+
+Docker também pode ser usado para criar bancos de dados. Para criar um banco de dados, você precisa baixar uma imagem de banco de dados e, em seguida, inicializar um container a partir da imagem.
+
+
+
+
+
+https://aws.amazon.com/pt/compare/the-difference-between-docker-images-and-containers/#:~:text=Uma%20imagem%20do%20Docker%2C%20ou,cont%C3%AAiner%20precisa%20para%20ser%20executado.
+
+https://zup.com.br/blog/o-que-e-docker-e-conteiner
+
+https://www.tecnisys.com.br/qual-e-a-diferenca-entre-uma-imagem-docker-e-um-container/
+
+https://www.tecnisys.com.br/qual-e-a-diferenca-entre-uma-imagem-docker-e-um-container/
+
+https://pt.linkedin.com/pulse/como-otimizar-suas-imagens-docker-ybenson-augustave-p5tze
+
+https://renatogroffe.medium.com/sql-server-docker-compose-criando-rapidamente-ambientes-e-populando-bases-para-testes-13d108d8cdb2
+
+https://learn.microsoft.com/pt-br/sql/linux/quickstart-install-connect-docker?view=sql-server-2017&tabs=cli&pivots=cs1-bash
+
+https://pt.linkedin.com/pulse/otimiza%C3%A7%C3%A3o-de-imagens-docker-t%C3%A9cnicas-para-reduzir-o-tamanho-rabay-ahkye?trk=public_post
